@@ -56,7 +56,10 @@ To download a subs and audio using the library in a script, you'll need to impor
 
     # This will save the subtutltles uner subtitles/{language}/ directory
   ######
-``# OR
+```
+
+```python
+# OR
   data_list = [
       'https://www.youtube.com/watch?v=zQtLIp1TXQE&list=PLb2aaNHUy_gGjz5E2R9ufU_14gITmpTpm'
       # 'https://www.youtube.com/playlist?list=PLS19FEYA85DgxHWVvKUUG8gxGVfCXiLnB'
