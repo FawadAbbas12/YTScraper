@@ -40,7 +40,7 @@ $ python setup.py install
 To download a subs and audio using the library in a script, you'll need to import the Subtitle_downloader class from the library which will scan for reuired subtitles in video and download them. From there, you can further download audio for videos which have the desired subs and then split then on bases of sub time stamp.
 
 ```python
- # downlad subs
+ # download subs
  >>> class SOURCE_TYPE:
       PLAYLIST='playlist'
       VIDEO_LIST='videos'
@@ -54,7 +54,27 @@ To download a subs and audio using the library in a script, you'll need to impor
     download_auto_generated=False # download youtube auto sus for given language tag 
     ).download()
 
-    # This will save the subtutltles uner subtitles/{language}/ directory 
+    # This will save the subtutltles uner subtitles/{language}/ directory
+  ######
+``# OR
+  data_list = [
+      'https://www.youtube.com/watch?v=zQtLIp1TXQE&list=PLb2aaNHUy_gGjz5E2R9ufU_14gITmpTpm'
+      # 'https://www.youtube.com/playlist?list=PLS19FEYA85DgxHWVvKUUG8gxGVfCXiLnB'
+      # 'https://www.youtube.com/watch?v=rRFA2OF9ZO4&list=UULFy2QNyhhTND6hx80pHNB1zg',
+      # 'https://www.youtube.com/watch?v=71oHy1VAY0Q&list=UULFVv5Z0rUq122Yiq9mRNTpJQ',
+      # 'https://www.youtube.com/watch?v=8umnbZ0LwbQ&list=UULFV48hMI--HOi-fGZ7019RVg',
+      # 'https://www.youtube.com/watch?v=aDeimNINv7A&list=UULF44l9XMwecN5nSgIF2Dvivg',
+      # 'https://www.youtube.com/watch?v=np7QxKOF9Bc&list=UULPrUvSaacXAvxu5pbQDdfgLA',
+      # 'https://www.youtube.com/watch?v=oBMSjdbA9-o&list=UULFyG1lWu497KzOKeIwdDvwxA',
+      # 'https://www.youtube.com/watch?v=sZ-QfeiCwKM&list=UULPXKfR4_mJlcpveUxD0Jqz7g',
+      # 'https://www.youtube.com/watch?v=ZdrcXaW_AmQ&list=UULFFSxPOD_6miBXa71Vx1UDBg',
+      # 'https://www.youtube.com/watch?v=gwgfdGow9K0&list=PL3FMLcIo9R3Cj0EUWuQjj8msx-QAOZ7lT',
+      # 'https://www.youtube.com/watch?v=A98pFNA0Xu8&list=UULF00CEaGLWf6X6-F6XuuHe2A',
+      # 'https://www.youtube.com/watch?v=3_6btSfFdHo&list=PLS19FEYA85DhZtdMPi0eyAngXPbYQIMji',
+  ]
+  downloader = Subtitle_downloader(data_list,SOURCE_TYPE.PLAYLIST)
+  downloader.download()
+  downloader.show_download_summary()
 ```
 
 ```python
